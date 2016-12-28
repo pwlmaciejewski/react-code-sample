@@ -44,10 +44,12 @@
     "webpack": "^1.14.0"
   },
   "dependencies": {
+    "autoprefixer": "^6.6.0",
     "classnames": "^2.2.5",
     "core-decorators": "^0.15.0",
     "lodash": "^4.17.3",
     "material-ui": "^0.16.6",
+    "postcss-loader": "^1.2.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",

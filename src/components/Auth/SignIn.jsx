@@ -1,3 +1,5 @@
+/* global window alert */
+
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import { autobind } from 'core-decorators';
@@ -33,6 +35,13 @@ export default class SignIn extends Component {
   }
   componentWillMount() {
     this.props.resetSignIn();
+  }
+  componentWillReceiveProps(nextProps) {
+    const { success } = this.props;
+    if (!success && nextProps.success) {
+      alert('Signed in successfully!');
+      window.location = 'https://www.youtube.com/watch?v=Nf_Y4MbUCLY';
+    }
   }
   onEmailChange(event) {
     this.setState({ email: event.target.value });

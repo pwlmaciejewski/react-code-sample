@@ -31,8 +31,13 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        loaders: ['style', 'css?modules', 'sass']
+        loaders: ['style', 'css?modules', 'postcss', 'sass']
       },
     ]
-  }
+  },
+  postcss: function () {
+    return [
+      require('autoprefixer')
+    ];
+  },
 };
