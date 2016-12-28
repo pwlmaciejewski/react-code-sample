@@ -8,8 +8,8 @@ export default class Header extends Component {
   render() {
     const { className } = this.props;
     return (
-      <div className={cx('root', className)}>
-        <div className={cx('inner')}>
+      <div className={ cx('root', className) }>
+        <div className={ cx('inner') }>
           All rights reserved.
         </div>
       </div>
