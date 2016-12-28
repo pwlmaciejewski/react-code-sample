@@ -6,6 +6,7 @@ import TextField from 'material-ui/TextField';
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
+import ErrorMessage from '../UI/ErrorMessage';
 import styles from './SignIn.scss';
 import {
   requestSignIn,
@@ -45,40 +46,50 @@ export default class SignIn extends Component {
     this.props.requestSignIn(email, password);
   }
   render() {
-    const { pending } = this.props;
+    const { pending, error } = this.props;
     const { email, password } = this.state;
     return (
-      <div className={ cx('root') }>
+      <div className={cx('root')}>
         <AppBar
           title="Sign up"
-          showMenuIconButton={ null }
+          showMenuIconButton={null}
         />
-        <Paper className={ cx('content') }>
-          <form onSubmit={ this.onSubmit }>
+        <Paper className={cx('content')}>
+          <form onSubmit={this.onSubmit}>
+            <ErrorMessage
+              className={cx('error')}
+              error={error}
+              prefix={'auth/'}
+              messages={{
+                'invalid-email': 'Invalid email or password.',
+                'invalid-passowrd': 'Invalid email or password.',
+                'invalid-credentials': 'Invalid email or password.'
+              }}
+            />
             <TextField
-              disabled={ pending }
-              className={ cx('field') }
-              type={ 'email' }
-              floatingLabelText={ 'E-mail' }
-              value={ email }
-              onChange={ this.onEmailChange }
+              disabled={pending}
+              className={cx('field')}
+              type={'email'}
+              floatingLabelText={'E-mail'}
+              value={email}
+              onChange={this.onEmailChange}
               floatingLabelFixed
               autoFocus
             />
             <TextField
-              disabled={ pending }
-              className={ cx('field') }
-              type={ 'password' }
-              value={ password }
-              onChange={ this.onPasswordChange }
-              floatingLabelText={ 'Password' }
+              disabled={pending}
+              className={cx('field')}
+              type={'password'}
+              value={password}
+              onChange={this.onPasswordChange}
+              floatingLabelText={'Password'}
               floatingLabelFixed
             />
-            <div className={ cx('actions-wrapper') }>
+            <div className={cx('actions-wrapper')}>
               <RaisedButton
-                label={ pending ? 'Please wait...' : 'Login' }
-                disabled={ pending }
-                type={ 'submit' }
+                label={pending ? 'Please wait...' : 'Login'}
+                disabled={pending}
+                type={'submit'}
                 primary
               />
             </div>

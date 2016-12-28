@@ -8,9 +8,26 @@ export default class Header extends Component {
   render() {
     const { className } = this.props;
     return (
-      <div className={ cx('root', className) }>
-        <div className={ cx('inner') }>
-          All rights reserved.
+      <div className={cx('root', className)}>
+        <div className={cx('inner')}>
+          <span>
+            Credentials:
+            &nbsp;
+            <code>foo@example.com</code>
+            &nbsp;/&nbsp;
+            <code>barbaz</code>
+          </span>
+          <span>
+            Source:
+            &nbsp;
+            <a
+              href="https://github.com/pwlmaciejewski/react-code-sample"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              pwlmaciejewski/react-code-sample
+            </a>
+          </span>
         </div>
       </div>
     );

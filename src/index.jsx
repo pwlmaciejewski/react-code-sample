@@ -12,7 +12,7 @@ appWrapper.id = 'app-wrapper';
 document.body.appendChild(appWrapper);
 
 render(
-  <Provider store={ store }>
+  <Provider store={store}>
     <App />
   </Provider>,
   appWrapper,

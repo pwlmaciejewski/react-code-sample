@@ -10,14 +10,14 @@ export default class Layout extends Component {
   render() {
     const { children } = this.props;
     return (
-      <div className={ cx('root') }>
-        <Header className={ cx('header') } />
-        <div className={ cx('content-wrapper') }>
-          <div className={ cx('content') } >
-            { children }
+      <div className={cx('root')}>
+        <Header className={cx('header')} />
+        <div className={cx('content-wrapper')}>
+          <div className={cx('content')} >
+            {children}
           </div>
         </div>
-        <Footer className={ cx('footer') } />
+        <Footer className={cx('footer')} />
       </div>
     );
   }

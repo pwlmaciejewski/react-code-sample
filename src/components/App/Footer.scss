@@ -7,4 +7,10 @@
   max-width: 950px;
   margin: 0 auto;
   padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+
+  code {
+    font-family: monospace;
+  }
 }

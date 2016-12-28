@@ -8,8 +8,8 @@ export default class Header extends Component {
   render() {
     const { className } = this.props;
     return (
-      <div className={ cx('root', className) }>
-        <h1 className={ cx('logo') }>React Code Sample</h1>
+      <div className={cx('root', className)}>
+        <h1 className={cx('logo')}>React Code Sample</h1>
       </div>
     );
   }
