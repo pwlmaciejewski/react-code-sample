@@ -2,12 +2,11 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { autobind } from 'core-decorators';
 import classNames from 'classnames/bind';
-import styles from './SignIn.scss';
-import _ from 'lodash';
 import TextField from 'material-ui/TextField';
 import AppBar from 'material-ui/AppBar';
 import Paper from 'material-ui/Paper';
 import RaisedButton from 'material-ui/RaisedButton';
+import styles from './SignIn.scss';
 import {
   requestSignIn,
   resetSignIn

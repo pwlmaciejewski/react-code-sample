@@ -38,3 +38,6 @@ jspm_packages
 
 # Distribution build
 dist
+
+# Mocha-webpack build dir
+.tmp
