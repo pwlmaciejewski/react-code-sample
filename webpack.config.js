@@ -18,7 +18,9 @@ module.exports = {
     new webpack.ProvidePlugin({
       "React": "react",
     }),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: 'src/index.ejs'
+    })
   ],
   module: {
     loaders: [
@@ -29,7 +31,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        loaders: ['css?modules', 'sass']
+        loaders: ['style', 'css?modules', 'sass']
       },
     ]
   }

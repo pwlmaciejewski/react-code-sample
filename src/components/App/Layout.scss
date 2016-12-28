@@ -1,0 +1,24 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+.content {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+.header,
+.content-wrapper {
+  margin-bottom: 30px;
+}
+
+.footer {
+
+}
