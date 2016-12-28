@@ -1,5 +1,9 @@
 # react-code-sample
 
+## Live preview
+
+https://pwlmaciejewski.github.io/react-code-sample/
+
 ## Installation
 
 ```bash
